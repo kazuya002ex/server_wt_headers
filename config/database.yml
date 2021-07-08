@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: password
+  host: db
+
+development:
+  <<: *default
+  database: wt_headers_development
+
+test:
+  <<: *default
+  database: wt_headers_test
+
+production:
+  <<: *default
+  database: wt_headers_production
+  username: wt_headers
+  password: <%= ENV['WT_HEADERS_DATABASE_PASSWORD'] %>
