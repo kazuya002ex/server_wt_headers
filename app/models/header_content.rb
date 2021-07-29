@@ -1,0 +1,2 @@
+class HeaderContent < ApplicationRecord
+end

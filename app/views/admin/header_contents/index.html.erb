@@ -37,24 +37,32 @@
         <h2>ヘッダー新規作成<h2>
     </div>
     <div class="header-forms">
-        <form>
-            <label>サイト名</label>
-            <input type="text">
+        <%= form_with(model: @header_content, url: admin_header_contents_path, local: true) do |f| %>
+            <%= f.label :site_title %>
             <br>
-            <label>ヘッダー画像</label>
-            <input type="file">
+            <%= f.text_field :site_title %>
+
             <br>
-            <label>ヘッダー画像(差分)</label>
-            <input type="file">
+            <%= f.label :image %>
             <br>
-            <label>URL</label>
-            <input type="text">
+            <%= f.file_field :image %>
+
             <br>
-            <label>ジャンル</label>
+            <%= f.label :responsive_image %>
+            <br>
+            <%= f.file_field :responsive_image %>
+
+            <br>
+            <%= f.label :redirect_url %>
+            <br>
+            <%= f.text_field :redirect_url %>
+
+            <br>
+            <%# TODO: ジャンルの追加タイミング %>
+            <%# <label>ジャンル</label>
             <select>
                 <option>こんにちは</option>
                 <option>こんばん</option>
-            </select>
-        </form>
-    <div>
+            </select> %>
+        <% end %>
 </section>
