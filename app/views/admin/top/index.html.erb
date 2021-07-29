@@ -1,3 +1,93 @@
-<h1>アド民トップ</h1>
+<section class="admin-top-title">
+    <h2>Header図鑑 管理画面</h2>
+</section>
 
-<%= link_to "なんか", "#" %>
+<section class="admin-top-header-contents">
+    <div class="header-content-title title">
+        <h3>ヘッダーコンテンツ</h3>
+        <%= link_to '一覧', admin_header_contents_path %>
+    </div>
+    <div class="header-content-contents">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>サイト名</th>
+                <th></th>
+                <th>URL</th>
+                <th>作成日</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>こんにちは</td>
+                <td></td>
+                <td>https://hoge.com</td>
+                <td>2021/07/21</td>
+                <td><a href="">編集</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>こんにちは</td>
+                <td></td>
+                <td>https://hoge.com</td>
+                <td>2021/07/21</td>
+                <td><a href="">編集</a></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section class="admin-top-tag-contents">
+    <div class="tag-title title">
+        <h3>タグ</h3>
+        <%= link_to '一覧', '#' %>
+    </div>
+    <div class="tag-contents">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th></th>
+                <th>タグ名</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td></td>
+                <td>こんにちは</td>
+                <td><a href="">編集</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td>こんにちは</td>
+                <td><a href="">編集</a></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section class="admin-top-genre-contents">
+    <div class="genre-title title">
+        <h3>タグ</h3>
+        <%= link_to '一覧', '#' %>
+    </div>
+    <div class="genre-contents">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>ジャンル名</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>こんにちは</td>
+                <td><a href="">編集</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>こんにちは</td>
+                <td><a href="">編集</a></td>
+            </tr>
+        </table>
+    </div>
+</section>
