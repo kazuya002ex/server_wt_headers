@@ -12,22 +12,16 @@
                 <th>作成日</th>
                 <th></th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>こんにちは</td>
-                <td></td>
-                <td>https://hoge.com</td>
-                <td>2021/07/21</td>
-                <td><a href="">編集</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>こんにちは</td>
-                <td></td>
-                <td>https://hoge.com</td>
-                <td>2021/07/21</td>
-                <td><a href="">編集</a></td>
-            </tr>
+            <% @header_contents.each do |header| %>
+                <tr>
+                    <td><%= header.id %></td>
+                    <td><%= header.site_name %></td>
+                    <td></td>
+                    <td><%= header.redirect_url %></td>
+                    <td><%= header.created_at.strftime('%Y/%-m/%-d') %></td>
+                    <td></td>
+                </tr>
+            <% end %>
         </table>
     </div>
 </section>
@@ -38,9 +32,9 @@
     </div>
     <div class="header-forms">
         <%= form_with(model: @header_content, url: admin_header_contents_path, local: true) do |f| %>
-            <%= f.label :site_title %>
+            <%= f.label :site_name %>
             <br>
-            <%= f.text_field :site_title %>
+            <%= f.text_field :site_name %>
 
             <br>
             <%= f.label :image %>

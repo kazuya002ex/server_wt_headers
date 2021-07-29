@@ -2,6 +2,7 @@ class Admin::HeaderContentsController < ApplicationController
 
   def index
     @header_content = HeaderContent.new
+    @header_contents = HeaderContent.all.order(id: :desc)
   end
 
   def show
@@ -9,6 +10,8 @@ class Admin::HeaderContentsController < ApplicationController
 
   def create
     @header_content = HeaderContent.new(header_params)
+    # TODO: ジャンルを指定できる
+    @header_content.genre_id = 1
     if @header_content.save
       flash[:notice] = 'ヘッダーを作成しました'
       redirect_to admin_header_contents_path
@@ -27,6 +30,6 @@ class Admin::HeaderContentsController < ApplicationController
   private
 
   def header_params
-    params.require(:header_content).permit(:site_title, :image, :responsive_image, :redirect_url)
+    params.require(:header_content).permit(:site_name, :image, :responsive_image, :redirect_url)
   end
 end

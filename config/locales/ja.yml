@@ -2,7 +2,7 @@ ja:
   activerecord:
     attributes:
       header_content:
-        site_title: 'サイト名'
+        site_name: 'サイト名'
         image: 'ヘッダー画像'
         responsive_image: 'ヘッダー画像（差分）'
         redirect_url: 'サイトURL'
